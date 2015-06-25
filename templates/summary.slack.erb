@@ -2,8 +2,6 @@
 M/Monit Node status
 -------------------
 <% @data['status'].each do |nugget| %>
-  <% nugget.each do |label, data| %>
-<%= label.ljust(35, '.') + data.to_s %>
-  <% end %>
+<%= nugget['label'].ljust(35, '.') + nugget['data'].to_s + "\n" %>
 <% end %>
 ```
